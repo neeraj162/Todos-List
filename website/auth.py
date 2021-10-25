@@ -53,7 +53,7 @@ def signup():
             flash("Account created Successfully..", category='success')
             return redirect('/')
                
-    return render_template("signup.html")
+    return render_template("signup.html", user=current_user)
 
 @auth.route("/logout")
 @login_required
